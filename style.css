@@ -3,7 +3,7 @@ html {
     margin: 0;
     font-size: 100%;
     box-sizing: border-box;
-    font-family: 'Amatic SC', cursive;
+    font-family: Tahoma, sans-serif;
 }
 
 :root {
@@ -27,11 +27,13 @@ body {
     align-items: flex-end;
     justify-content: space-between;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .raccoon_image {
     max-width: 40%;
     max-height: 40%;
+    transform: scale(1.3);
 }
 
 .raccoon_image:hover {
@@ -50,11 +52,12 @@ body {
 
 h1 {
     align-self: flex-start;
-    font-size: 4rem;
+    font-size: 5rem;
+    font-family: "amatic sc", cursive;
 }
 
 p {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 .title_text {
