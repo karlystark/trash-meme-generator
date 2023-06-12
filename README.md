@@ -10,4 +10,4 @@ CSS layout (again, this seems to be early-days challenging).
 
 Some features I would like to add are:
 1. Allowing user to download memes
-2. Allowing user an option to include centered text (some meme templates require text to be centered)
+2. Allowing user an option to include centered text (some meme templates require text to be centered) (done!)
