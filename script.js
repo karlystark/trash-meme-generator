@@ -19,11 +19,11 @@ form.addEventListener('submit', function(e){
   // Make sure that user inputs a url and at least one text input
 
   if(urlInput.value === ''){
-    return alert("Sorry, we need an image URL to make our trash.");
+    return alert("Sorry, we need an image URL to make some trash!");
   }
 
   if(topTextInput.value === '' && bottomTextInput.value === ''){
-    return alert("Sorry, we need at least one text input here!");
+    return alert("Sorry, we need at least one text input to make some trash!");
   }
 
   // Create new variable called newMeme and assign to it the evaluated result of calling makeMeme
