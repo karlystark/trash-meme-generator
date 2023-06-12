@@ -3,6 +3,7 @@
 const form = document.querySelector("form");
 const urlInput = document.querySelector('input[name="url_submission"]');
 const topTextInput = document.querySelector('input[name="top_text_input"]');
+const centerTextInput = document.querySelector('input[name="center_text_input"]');
 const bottomTextInput = document.querySelector('input[name="bottom_text_input"]');
 const results = document.querySelector('.results');
 
@@ -19,16 +20,16 @@ form.addEventListener('submit', function(e){
   // Make sure that user inputs a url and at least one text input
 
   if(urlInput.value === ''){
-    return alert("Sorry, we need an image URL to make some trash!");
+    return alert("Sorry, we need an image URL to make our trash.");
   }
 
-  if(topTextInput.value === '' && bottomTextInput.value === ''){
-    return alert("Sorry, we need at least one text input to make some trash!");
+  if(topTextInput.value === '' && bottomTextInput.value === '' && centerTextInput.value === ''){
+    return alert("Sorry, we need at least one text input here!");
   }
 
   // Create new variable called newMeme and assign to it the evaluated result of calling makeMeme
 
-  const newMeme = makeMeme(urlInput, topTextInput, bottomTextInput);
+  const newMeme = makeMeme(urlInput, topTextInput, centerTextInput, bottomTextInput);
 
   // Append the result/newMeme to the results variable/div
 
@@ -36,14 +37,14 @@ form.addEventListener('submit', function(e){
 
   // Clear the form after each submit
 
-  formClear(urlInput, topTextInput, bottomTextInput);
+  formClear(urlInput, topTextInput, centerTextInput, bottomTextInput);
 
 });
 
 
 /* ============= FUNCTION TO CREATE MEME ================ */
 
-function makeMeme(urlInput, topText, bottomText){
+function makeMeme(urlInput, topText, centerText, bottomText){
 
   // Create a memeContainer variable to hold each submitted input collection aka meme recipe
 
@@ -60,6 +61,11 @@ function makeMeme(urlInput, topText, bottomText){
   top.classList.add("top_text");
   top.innerText = topTextInput.value.toUpperCase();
 
+  const center = document.createElement('div');
+  center.classList.add("center_text");
+  center.innerText = centerTextInput.value.toUpperCase();
+
+
   const bottom = document.createElement('div');
   bottom.classList.add("bottom_text");
   bottom.innerText = bottomTextInput.value.toUpperCase();
@@ -72,7 +78,7 @@ function makeMeme(urlInput, topText, bottomText){
 
   // Append the elements to the new meme container to create the meme
 
-  memeContainer.append(img, top, bottom, deleteButton);
+  memeContainer.append(img, top, center, bottom, deleteButton);
 
   // Append created meme to our results div and return the memeContainer out of the function
 
@@ -84,9 +90,10 @@ function makeMeme(urlInput, topText, bottomText){
 
 /* ============= FUNCTION TO CLEAR THE FORM ================ */
 
-function formClear (urlInput, topText, bottomText){
+function formClear (urlInput, topText, centerText, bottomText){
   urlInput.value = "";
   topText.value = "";
+  centerText.value = "";
   bottomText.value = "";
 };
 
@@ -103,5 +110,7 @@ results.addEventListener('click', function(e){
     e.target.parentElement.remove();
 }
 });
+
+
 
 
