@@ -1,0 +1,151 @@
+html {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'Amatic SC', cursive;
+}
+
+:root {
+    --bg-body: hsl(0, 0%, 99%);
+    --bg-card: hsl(0, 5%, 87%);
+    --text1: hsl(88, 80%, 16%);
+    --text2: hsl(0, 75%, 31%);
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text1);
+}
+
+/*=============== HEADER ============= */
+
+.header_container {
+    background-color: var(--text2);
+    color: var(--bg-body);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.raccoon_image {
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.raccoon_image:hover {
+    transform:scale(1.5)rotate(2deg);
+    transition: 0.1s ease-in;
+}
+
+.trashcan_image{
+    max-width: 30%;
+    margin-bottom: -30px;
+}
+
+.trashcan_image:hover {
+    transform:rotate(12deg);
+}
+
+h1 {
+    align-self: flex-start;
+    font-size: 4rem;
+}
+
+p {
+    font-size: 1.75rem;
+}
+
+.title_text {
+    text-align: center;
+}
+
+/*=============== FORM ============= */
+
+.form_container {
+    background-color:var(--text1);
+    color: var(--bg-body);
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 6px;
+    max-width: 65%;
+    overflow: hidden;
+}
+
+input {
+    width: 300px;
+    height: 2rem;
+    margin: 5px;
+}
+
+.button {
+    float: right;
+    width: 100px;
+    margin: 20px;
+    background: transparent;
+    border: 2px solid var(--bg-body);
+    color: var(--bg-body);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform:scale(1.2)rotate(2deg);
+}
+
+/*=============== MEMES ============= */
+
+.results {
+    min-height: 40vh;
+    width: 80vw;
+    padding: 1.25rem;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.meme_item {
+    padding: 1.25rem;
+    max-width: 400px;
+    border-radius: 6px;
+    position: relative;
+    height: fit-content;
+}
+
+.meme_item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.meme_item div {
+    position: absolute;
+    text-align: center;
+    width: 400px;
+    font-family: "Impact", sans-serif;
+    font-size: 2.25rem;
+    color:var(--bg-body);
+}
+
+.meme_item .top_text {
+    top: 1.75rem;
+}
+
+.meme_item .bottom_text {
+    bottom: 3.75rem;
+}
+
+.delete_button {
+    background-color: var(--text2);
+    border-radius: 6px;
+    color: var(--bg-body);
+    cursor: pointer;
+}
+
+.delete_button:hover {
+   transform:scale(1.2)rotate(2deg);
+}
+
