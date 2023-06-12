@@ -44,7 +44,7 @@ form.addEventListener('submit', function(e){
 
 /* ============= FUNCTION TO CREATE MEME ================ */
 
-function makeMeme(urlInput, topText, centerText, bottomText){
+function makeMeme(urlInput, topTextInput, centerTextInput, bottomTextInput){
 
   // Create a memeContainer variable to hold each submitted input collection aka meme recipe
 
