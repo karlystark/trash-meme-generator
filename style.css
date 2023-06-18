@@ -8,9 +8,9 @@ html {
 
 :root {
     --bg-body: hsl(0, 0%, 99%);
-    --bg-card: hsl(0, 5%, 87%);
-    --text1: hsl(88, 80%, 16%);
-    --text2: hsl(0, 75%, 31%);
+    --bg-header:  hsl(0, 75%, 31%);
+    --bg-input:  hsl(88, 80%, 16%);
+    --text1: hsl(0, 0%, 99%);
 }
 
 body {
@@ -21,12 +21,13 @@ body {
 /*=============== HEADER ============= */
 
 .header_container {
-    background-color: var(--text2);
-    color: var(--bg-body);
+    background-color: var(--bg-header);
+    color: var(--text1);
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     overflow: hidden;
+    border-radius: 3px;
 }
 
 .raccoon_image {
@@ -65,8 +66,8 @@ p {
 /*=============== FORM ============= */
 
 .form_container {
-    background-color:var(--text1);
-    color: var(--bg-body);
+    background-color:var(--bg-input);
+    color: var(--text1);
     padding: 10px;
     margin: auto;
     margin-top: 20px;
@@ -82,7 +83,7 @@ p {
 
 input {
     width: 300px;
-    height: 2rem;
+    height: 32px;
     margin: 5px;
 }
 
@@ -108,8 +109,7 @@ input {
     width: 80vw;
     padding: 1.25rem;
     display: flex;
-    flex-wrap: wrap-reverse;
-    flex-direction: row-reverse;
+    flex-flow: row-reverse wrap-reverse;
     justify-content: space-around;
     align-items: center;
 }
@@ -122,19 +122,19 @@ input {
     height: fit-content;
 }
 
-.meme_item img {
-    width: 100%;
-    border-radius: 5px;
-}
-
 .meme_item div {
     position: absolute;
     text-align: center;
     width: 400px;
     font-family: "Impact", sans-serif;
     font-size: 2.1rem;
-    color:var(--bg-body);
+    color:var(--text1);
   -webkit-text-stroke: 1.5px black;
+}
+
+.meme_item img {
+    width: 100%;
+    border-radius: 6px;
 }
 
 .meme_item .top_text {
@@ -153,9 +153,9 @@ input {
 }
 
 .delete_button {
-    background-color: var(--text2);
+    background-color: var(--bg-header);
     border-radius: 6px;
-    color: var(--bg-body);
+    color: var(--text1);
     cursor: pointer;
 }
 

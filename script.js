@@ -90,6 +90,8 @@ function makeMeme(urlInput, topTextInput, centerTextInput, bottomTextInput){
 
 /* ============= FUNCTION TO CLEAR THE FORM ================ */
 
+//set each element back to empty value
+
 function formClear (urlInput, topText, centerText, bottomText){
   urlInput.value = "";
   topText.value = "";
